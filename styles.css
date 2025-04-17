@@ -196,19 +196,23 @@ body {
     }
   
     .cardwrapper {
+      height: auto;
       flex-direction: column;
       padding: 0 1rem;
+      padding-bottom: 4rem;
     }
   
     .maincard {
-      width: 85%;
-      padding: 1.5rem 1rem;
-      margin-top: 2rem;
+      width: 80%;
+      padding: 1rem 0.8rem;
+      margin-top: 3rem;
       max-height: none;
     }
   
     .cardimg {
       width: 35vw;
+      height: auto;
+      object-fit: cover;
       max-width: 120px;
       aspect-ratio: 1;
       transform: translateX(-50%) translateY(10%);
@@ -216,15 +220,15 @@ body {
     }
   
     .content h1 {
-      font-size: 7vw;
+      font-size: clamp(20px, 6vw, 30px);
     }
   
     .content h2 {
-      font-size: 4vw;
+      font-size: clamp(16px, 4.5vw, 22px);
     }
   
     .content p {
-      font-size: 4vw;
+      font-size: clamp(14px, 4vw, 18px);
       padding: 0.7rem;
     }
   
