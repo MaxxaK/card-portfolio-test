@@ -16,14 +16,12 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  align-items: center; /* Center content vertically */
   height: 100vh;
-
+  flex-direction: column; /* Stack elements vertically */
   background-color: var(--night);
   background-size: 100% 100%;
   background-repeat: repeat;
-
   background-image: radial-gradient(circle at center center, rgba(217,228,216, 0),rgb(15,20,16)),
   linear-gradient(135deg, rgba(40,30,50,0.2), transparent),
   repeating-linear-gradient(179deg, rgba(13,21,31,0.8) 0px, rgba(13,21,31,0.6) 1px,transparent 1px, transparent 4px),
@@ -35,13 +33,13 @@ body {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* Center vertically */
   flex-direction: column;
   width: 100%;
-  height: 100%;
   max-width: 600px;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  height: 100%; /* Ensure wrapper takes full height */
 }
 
 .maincard {
@@ -51,7 +49,7 @@ body {
   min-height: 350px;
   max-height: 90vh;
   padding: 4rem 1.5rem 2rem 1.5rem;
-  margin-top: 4rem;
+  margin-top: 0; /* Removed margin-top to prevent shifting */
   box-sizing: border-box;
   z-index: 1;
   overflow: hidden;
@@ -61,15 +59,14 @@ body {
 
 .cardimg {
   position: absolute;
-  top: -50px;
+  top: -50px; /* Position image at the top of the card */
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); /* Center horizontally */
   width: 20vw;
   max-width: 200px;
-  margin-top: 4rem;
   height: auto;
   max-height: 20vw;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1;
   border-radius: 50%;
   border: 10px solid var(--night);
   object-fit: cover;
@@ -186,63 +183,63 @@ body {
   color: white;
 }
 
-
 @media (max-width: 768px) {
-    body {
-      flex-direction: column;
-      align-items: flex-start;
-      height: auto;
-      padding: 1rem 0;
-      overflow-x: hidden;
-    }
-  
-    .cardwrapper {
-      flex-direction: column;
-      padding: 0 1rem;
-    }
-  
-    .maincard {
-      width: 85%;
-      padding: 1.5rem 1rem;
-      margin-top: 2rem;
-      max-height: none;
-    }
-  
-    .cardimg {
-      width: 35vw;
-      max-width: 120px;
-      aspect-ratio: 1;
-      transform: translateX(-50%) translateY(10%);
-      border-width: 6px;
-    }
-  
-    .content h1 {
-      font-size: 7vw;
-    }
-  
-    .content h2 {
-      font-size: 4vw;
-    }
-  
-    .content p {
-      font-size: 4vw;
-      padding: 0.7rem;
-    }
-  
-    .footer {
-      width: 90%;
-      padding: 1rem;
-    }
-  
-    .footer i {
-      font-size: 8vw;
-      padding: 0.5rem;
-    }
-  
-    .footer button {
-      font-size: 4vw;
-      padding: 0.8rem;
-      width: 100%;
-    }
+  body {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 1rem 0;
+    overflow-x: hidden;
+  }
+
+  .cardwrapper {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .maincard {
+    width: 95%;
+    padding: 1.5rem 1rem;
+    margin-top: 0; /* No margin-top for small screens */
+    margin-bottom: 0;
+    max-height: none;
+  }
+
+  .cardimg {
+    width: 35vw;
+    max-width: 120px;
+    transform: translateX(-50%) translateY(10%);
+    border-width: 6px;
+  }
+
+  .content h1 {
+    font-size: 7vw;
+  }
+
+  .content h2 {
+    font-size: 4vw;
+  }
+
+  .content p {
+    font-size: 4vw;
+    padding: 1rem;
+  }
+
+  .footer {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .footer i {
+    font-size: 8vw;
+    padding: 0.5rem;
+  }
+
+  .footer button {
+    font-size: 4vw;
+    padding: 0.8rem;
+    width: 100%;
+  }
 }
+
 
