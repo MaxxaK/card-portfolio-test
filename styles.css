@@ -195,7 +195,7 @@ body {
       overflow-x: hidden;
     }
   
-    .card-wrapper {
+    .cardwrapper {
       flex-direction: column;
       padding: 0 1rem;
     }
@@ -210,7 +210,7 @@ body {
     .cardimg {
       width: 35vw;
       max-width: 120px;
-      aspect-ratio: 1/1;
+      aspect-ratio: 1;
       transform: translateX(-50%) translateY(10%);
       border-width: 6px;
     }
