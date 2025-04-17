@@ -203,18 +203,25 @@ body {
       height: auto;
       padding: 1rem 0;
       overflow-x: hidden;
+      margin: 0;
+    }
+
+    html {
+      overflow-x: hidden;
     }
   
     .cardwrapper {
       flex-direction: column;
       padding: 0 1rem;
+      width: 100%;
     }
   
     .maincard {
-      width: 95%;
+      width: 100%;
       padding: 1.5rem 1rem;
       margin-top: 2rem;
       max-height: none;
+      box-sizing: border-box;
     }
   
     .cardimg {
@@ -243,8 +250,9 @@ body {
     }
   
     .footer {
-      width: 90%;
+      width: 100%;
       padding: 1rem;
+      box-sizing: border-box;
     }
   
     .footer i {
