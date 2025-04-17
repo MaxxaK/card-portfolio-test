@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Anaheim:wght@400..800&family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --night: hsla(132, 14%, 7%, 1);
+    --eerie-black: hsla(41, 24%, 13%, 1);
+    --drab-dark-brown: hsla(39, 40%, 23%, 1);
+    --chamoisee: hsla(38, 40%, 44%, 1);
+    --sage: hsla(53, 19%, 59%, 1);
+    --apple-green: hsla(64, 54%, 42%, 1);
+    --honeydew: hsla(115, 18%, 87%, 1);
+}
+
+body {
+  will-change: background-position;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+
+  background-color: var(--night);
+  background-size: 100% 100%;
+  background-repeat: repeat;
+
+  background-image: radial-gradient(circle at center center, rgba(217,228,216, 0),rgb(15,20,16)),
+  linear-gradient(135deg, rgba(40,30,50,0.2), transparent),
+  repeating-linear-gradient(179deg, rgba(13,21,31,0.8) 0px, rgba(13,21,31,0.6) 1px,transparent 1px, transparent 4px),
+  repeating-linear-gradient(89deg, rgb(57,61,64) 0px, rgb(57, 61, 64) 5px,transparent 5px, transparent 6px),
+  linear-gradient(134deg, rgb(15,20,16),rgb(15,20,16));
+}
+
+.cardwrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    padding-top: 2rem; /* Adjust top padding to suit your design */
+    padding-bottom: 2rem;
+  }
+
+.maincard {
+    position: relative;
+    border-radius: 16px;
+    width: clamp(300px, 60vw, 600px);
+    min-height: 350px;
+    max-height: 90vh;
+    padding: 4rem 1.5rem 2rem 1.5rem; /* Adjust padding for better layout */
+    margin-top: 4rem; /* Add margin-top to prevent content from touching top */
+    box-sizing: border-box;
+    z-index: 1;
+    overflow: hidden;
+    background-color: var(--honeydew);
+    border: 3px solid var(--honeydew);
+}
+
+.cardimg {
+    position: absolute;
+    top: -50px; /* Adjust this value to move the image up or down */
+    left: 50%;
+    transform: translateX(-50%); /* Center the image horizontally */
+    width: 20vw; /* Ensure the image is responsive */
+    max-width: 200px; /* Cap the maximum width */
+    margin-top: 4rem;
+    height: auto;
+    max-height: 20vw; /* Ensure the height scales proportionally */
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 10px solid var(--night);
+    object-fit: cover;
+    z-index: 2;
+}
+
+.content {
+    position: relative;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    width: 100%;
+    z-index: 3;
+  }
+
+.content h1 {
+    margin: 0;
+    font-family: "Anaheim";
+    font-size: clamp(30px, 3vw, 100px);
+    z-index: 3;
+}
+
+.content hr {
+    border: none;
+    border-top: 2px solid var(--night);
+    width: 75%;
+    margin: 0.3rem auto;
+    z-index: 3;
+}
+
+.content h2 {
+    margin: 0;
+    font-family: "Anaheim";
+    font-size: clamp(15px, 1.5vw, 80px);
+}
+
+.content p {
+    margin: 0;
+    font-family: "Outfit";
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: clamp(14px, 2vw, 18px);
+    background-color: var(--sage);
+    border-radius: 16px;
+    box-shadow: hsla(41, 24%, 13%, 0.3) 0px 0px 16px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px auto;
+    margin-bottom: 30px;
+    width: 80%;
+    height: auto;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: medium;
+    background-color: var(--honeydew);
+    border: 3px solid var(--honeydew);
+    border-radius: 16px;
+}
+
+.footer i {
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 10px;
+    font-size: clamp(30px, 3vw, 50px);
+    color: var(--night);
+    background-color: var(--sage);
+    border: 2px solid var(--sage);
+    border-radius: 16px;
+    cursor: pointer;
+    box-shadow: hsla(41, 24%, 13%, 0.2) 0px 0px 16px;
+    transition: all 0.2s ease;
+}
+
+.footer i:hover{
+    color: var(--honeydew);
+    background-color: var(--night);
+    border: 2px solid var(--night);
+}
+
+.footer .icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-bottom: 0;
+}
+
+.footer button {
+    margin-top: 30px;
+    background-color: var(--night);
+    color: honeydew;
+    padding: 10px 25px;
+    border: 3px solid black;
+    border-radius: 16px;
+    cursor: pointer;
+    font-family: "Anaheim";
+    font-weight: bold;
+    box-shadow: hsla(41, 24%, 13%, 0.2) 0px 0px 16px;
+    transition: all 0.3s ease;
+}
+
+.footer button:hover {
+    background-color: var(--eerie-black);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    body {
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+      padding: 1rem 0;
+      overflow-x: hidden;
+    }
+  
+    .card-wrapper {
+      flex-direction: column;
+      padding: 0 1rem;
+    }
+  
+    .maincard {
+      width: 95%;
+      padding: 1.5rem 1rem;
+      margin-top: 2rem;
+      max-height: none;
+    }
+  
+    .cardimg {
+      width: 35vw;
+      max-width: 120px;
+      transform: translateX(-50%) translateY(10%);
+      border-width: 6px;
+    }
+  
+    .content h1 {
+      font-size: 7vw;
+    }
+  
+    .content h2 {
+      font-size: 4vw;
+    }
+  
+    .content p {
+      font-size: 4vw;
+      padding: 1rem;
+    }
+  
+    .footer {
+      width: 90%;
+      padding: 1rem;
+    }
+  
+    .footer i {
+      font-size: 8vw;
+      padding: 0.5rem;
+    }
+  
+    .footer button {
+      font-size: 4vw;
+      padding: 0.8rem;
+      width: 100%;
+    }
+  }
