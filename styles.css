@@ -69,7 +69,7 @@ body {
     margin-top: 4rem;
     height: auto;
     max-height: 20vw; /* Ensure the height scales proportionally */
-    aspect-ratio: 1;
+    aspect-ratio: 1/1;
     border-radius: 50%;
     border: 10px solid var(--night);
     object-fit: cover;
@@ -201,7 +201,7 @@ body {
     }
   
     .maincard {
-      width: 95%;
+      width: 85%;
       padding: 1.5rem 1rem;
       margin-top: 2rem;
       max-height: none;
@@ -210,6 +210,7 @@ body {
     .cardimg {
       width: 35vw;
       max-width: 120px;
+      aspect-ratio: 1/1;
       transform: translateX(-50%) translateY(10%);
       border-width: 6px;
     }
@@ -224,7 +225,7 @@ body {
   
     .content p {
       font-size: 4vw;
-      padding: 1rem;
+      padding: 0.7rem;
     }
   
     .footer {
