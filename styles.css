@@ -206,9 +206,10 @@ body {
   }
 
   .cardimg {
-    width: 35vw;
-    max-width: 120px;
-    transform: translateX(-50%) translateY(10%);
+    width: 50vw; /* Use a percentage of viewport width */
+    max-width: 150px; /* Set a max width for the image */
+    height: auto; /* Let the height adjust automatically */
+    max-height: 50vw; /* Limit the maximum height */
     border-width: 6px;
   }
 
