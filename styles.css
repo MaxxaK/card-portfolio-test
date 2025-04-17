@@ -10,6 +10,10 @@
     --honeydew: hsla(115, 18%, 87%, 1);
 }
 
+* {
+  outline: 1px solid red; /* Outline all elements in red */
+}
+
 body {
   will-change: background-position;
   margin: 0;
@@ -209,11 +213,11 @@ body {
   
     .cardimg {
       width: 35vw;
-        height: auto;
+      height: auto;
       max-height: 35vw;
       aspect-ratio: 1;
       max-width: 120px;
-        margin-top: 2rem;
+      margin-top: 1rem;
       object-fit: cover;
       transform: translateX(-50%) translateY(10%);
       border-width: 6px;
