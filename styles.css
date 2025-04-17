@@ -209,9 +209,11 @@ body {
   
     .cardimg {
       width: 35vw;
-      height: 35vw;
+        height: auto;
+      max-height: 35vw;
       aspect-ratio: 1;
       max-width: 120px;
+        margin-top: 2rem;
       object-fit: cover;
       transform: translateX(-50%) translateY(10%);
       border-width: 6px;
